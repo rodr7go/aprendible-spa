@@ -12,3 +12,10 @@ const { mix } = require('laravel-mix');
  */
 
 mix.js('resources/assets/js/app.js', 'public/js');
+
+mix.browserSync({
+    proxy: 'http://spa-blog.test',
+    open: false
+});
+
+mix.disableNotifications();
