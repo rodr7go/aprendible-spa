@@ -1002,7 +1002,8 @@ var router = new __WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]({
         component: {
             template: '<div>Este es el contacto</div>'
         }
-    }]
+    }],
+    linkExactActiveClass: 'active'
 });
 
 // Vue.component('example', require('./components/Example.vue'));

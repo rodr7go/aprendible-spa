@@ -31,7 +31,8 @@ let router = new Router({
                 template: '<div>Este es el contacto</div>'
             }
         }
-    ]
+    ],
+    linkExactActiveClass: 'active'
 });
 
 // Vue.component('example', require('./components/Example.vue'));
