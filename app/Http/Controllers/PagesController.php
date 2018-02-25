@@ -28,6 +28,11 @@ class PagesController extends Controller
 
 		$posts = $query->paginate();
 
+        if ( request()->wantsJson() )
+        {
+            return $posts;
+        }
+
     	return view('pages.home', compact('posts'));
     }
 
