@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Post;
 use Illuminate\Http\Request;
+use App\Http\Resources\PostResource;
 
 class PostsController extends Controller
 {
@@ -11,6 +12,8 @@ class PostsController extends Controller
     {
         if ($post->isPublished() || auth()->check())
         {
+            $post->load('owner', 'category', 'tags', 'photos');
+
             if (request()->wantsJson())
             {
                 return $post;
