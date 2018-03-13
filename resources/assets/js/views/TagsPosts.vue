@@ -24,14 +24,13 @@
                     <!-- @include('posts.tags') -->
                     <div class="tags container-flex">
                         <span class="tag c-gris" v-for="tag in post.tags">
-                            <router-link :to="{name: 'tags_posts', params: {tag: tag.url}}">
-                                #{{ tag.name }}
-                            </router-link>
+                            <a href="#">#{{ tag.name }}</a>
                         </span>
                     </div>
 
                 </footer>
             </div>
+
         </article>
         <!-- @empty -->
         <article class="post" v-if="! posts.length">
@@ -40,8 +39,7 @@
             </div>
         </article>
         <!-- @endforelse -->
-    </section><!-- fin del section.posts -->
-    <!-- {{ $posts->appends(request()->all())->links() }} -->
+    </section>
 </template>
 
 <script>
@@ -52,7 +50,7 @@
             }
         },
         mounted(){
-            axios.get('/api/posts')
+            axios.get(`/api/etiquetas/${this.$route.params.tag}`)
                 .then(res => {
                     this.posts = res.data.data;
                 })
