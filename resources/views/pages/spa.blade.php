@@ -37,7 +37,7 @@
         </div>
     </header>
 
-   <router-view></router-view>
+   <router-view :key="$route.fullPath"></router-view>
 
     <section class="footer">
         <footer>
