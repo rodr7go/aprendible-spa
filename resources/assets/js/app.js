@@ -3,6 +3,8 @@ require('./bootstrap');
 import Vue from 'vue';
 import router from './routes'
 
+// require('vue2-animate/dist/vue2-animate.min.css');
+
 Vue.component('post-header', require('./components/PostHeader'));
 Vue.component('posts-list', require('./components/PostsList'));
 Vue.component('posts-list-item', require('./components/PostsListItem'));
