@@ -13,12 +13,9 @@
                     <post-link class="text-uppercase c-green" :post="post">Leer más</post-link>
                 </div>
 
-                <!-- @include('posts.tags') -->
                 <div class="tags container-flex">
                     <span class="tag c-gris" v-for="tag in post.tags">
-                        <router-link :to="{name: 'tags_posts', params: {tag: tag.url}}">
-                            #{{ tag.name }}
-                        </router-link>
+                        <tag-link :tag="tag" />
                     </span>
                 </div>
 
