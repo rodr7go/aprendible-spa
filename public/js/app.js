@@ -13170,6 +13170,7 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vue_
         component: __webpack_require__(55)
     }],
     linkExactActiveClass: 'active',
+    mode: 'history',
     scrollBehavior: function scrollBehavior() {
         return { x: 0, y: 0 };
     }
@@ -18509,9 +18510,9 @@ if (false) {
 var disposed = false
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(96)
+var __vue_script__ = __webpack_require__(95)
 /* template */
-var __vue_template__ = __webpack_require__(95)
+var __vue_template__ = __webpack_require__(96)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -18551,6 +18552,71 @@ module.exports = Component.exports
 
 /***/ }),
 /* 95 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            sent: false,
+            working: false,
+            form: {
+                name: 'Jorge',
+                email: 'jorge@email.com',
+                subject: 'Ayuda',
+                message: 'Necesito ayuda por favor'
+            }
+        };
+    },
+
+    methods: {
+        submit: function submit() {
+            var _this = this;
+
+            this.working = true;
+
+            axios.post('/api/messages', this.form).then(function (res) {
+                _this.sent = true;
+                _this.working = false;
+            }).catch(function (errors) {
+                _this.sent = false;
+                _this.working = false;
+            });
+        }
+    }
+});
+
+/***/ }),
+/* 96 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -18715,71 +18781,6 @@ if (false) {
     require("vue-hot-reload-api")      .rerender("data-v-667ae69d", module.exports)
   }
 }
-
-/***/ }),
-/* 96 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    data: function data() {
-        return {
-            sent: false,
-            working: false,
-            form: {
-                name: 'Jorge',
-                email: 'jorge@email.com',
-                subject: 'Ayuda',
-                message: 'Necesito ayuda por favor'
-            }
-        };
-    },
-
-    methods: {
-        submit: function submit() {
-            var _this = this;
-
-            this.working = true;
-
-            axios.post('/api/messages', this.form).then(function (res) {
-                _this.sent = true;
-                _this.working = false;
-            }).catch(function (errors) {
-                _this.sent = false;
-                _this.working = false;
-            });
-        }
-    }
-});
 
 /***/ })
 /******/ ]);
