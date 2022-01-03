@@ -35,7 +35,8 @@ export default new Router({
         {
             path: '/blog/:url',
             name: 'posts_show',
-            component: Posts
+            component: Posts,
+            props: true
         },
         {
             path: '*',
