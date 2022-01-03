@@ -64,6 +64,8 @@
 
    <router-view></router-view>
 
+{{--    <example></example>--}}
+
     <section class="footer">
         <footer>
             <div class="container">
