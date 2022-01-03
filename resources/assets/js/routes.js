@@ -1,7 +1,7 @@
 import Vue from 'vue';
-import Router2 from 'vue-router';
+import Router from 'vue-router';
 
-Vue.use(Router2);
+Vue.use(Router);
 
 import Home from "./views/Home";
 import About from "./views/About";
@@ -10,7 +10,7 @@ import Contact from "./views/Contact";
 import Posts from "./views/PostsShow";
 import View404 from "./views/404";
 
-export default new Router2({
+export default new Router({
     routes: [
         {
             path: '/',
