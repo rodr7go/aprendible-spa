@@ -6,13 +6,13 @@
         @endif -->
 
         <posts-list-item
-            v-for="post in items"
+            v-for="post in posts"
             :post="post"
             :key="post.id"
         />
 
         <!-- @empty -->
-        <article class="post" v-if="! items.length">
+        <article class="post" v-if="! posts.length">
             <div class="content-post">
                 <h1>No hay publicaciones todavía.</h1>
             </div>
@@ -24,6 +24,6 @@
 
 <script>
     export default {
-        props: ['items']
+        props: ['posts']
     }
 </script>

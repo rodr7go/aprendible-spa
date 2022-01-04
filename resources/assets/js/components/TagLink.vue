@@ -1,6 +1,6 @@
 <template>
     <router-link :to="{
-        name: 'tags_posts',
+        name: 'tag_posts',
         params: {
             tag: tag.url
         }

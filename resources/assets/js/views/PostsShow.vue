@@ -1,16 +1,16 @@
 <template>
     <section class="post container">
 
-        <!-- @include( $post->viewType() ) -->
-
         <div class="content-post">
+            <post-header :post="post"></post-header>
+
 
             <div class="image-w-text" v-html="post.body"> </div>
 
             <footer class="container-flex space-between">
                 <div class="tags container-flex">
                     <span class="tag c-gris" v-for="tag in post.tags">
-                      
+
                     </span>
                 </div>
             </footer>
