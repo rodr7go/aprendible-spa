@@ -36,9 +36,11 @@
         </div>
     </header>
 
-   <router-view :key="$route.fullPath"></router-view>
-
-{{--    <example></example>--}}
+    <div style="min-height: 100vh">
+        <transition name="lightSpeed" mode="out-in">
+            <router-view :key="$route.fullPath"></router-view>
+        </transition>
+    </div>
 
     <section class="footer">
         <footer>

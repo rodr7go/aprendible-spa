@@ -120,6 +120,7 @@ class PostsTableSeeder extends Seeder
         $post->save();
 
         $post->tags()->attach(Tag::create(['name' => 'Validation']));
+        $post->tags()->attach(Tag::create(['name' => 'Laravel']));
 
     }
 }

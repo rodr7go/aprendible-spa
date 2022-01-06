@@ -43,6 +43,7 @@ class PagesController extends Controller
 
     public function archive()
     {
+
         $data = [
             'authors' => User::latest()->take(4)->get(),
             'categories' => Category::take(7)->get(),
@@ -51,7 +52,7 @@ class PagesController extends Controller
                 ->selectRaw('monthname(published_at) month')
                 ->selectRaw('count(*) posts')
                 ->groupBy('year', 'month')
-                ->orderBy('published_at')
+//                ->orderBy('published_at')
                 ->get()
         ];
 

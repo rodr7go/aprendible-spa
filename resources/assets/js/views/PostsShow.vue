@@ -17,6 +17,7 @@
 
             <div class="comments">
                 <div class="divider"></div>
+                <disqus-comments></disqus-comments>
             </div><!-- .comments -->
         </div>
     </section>
