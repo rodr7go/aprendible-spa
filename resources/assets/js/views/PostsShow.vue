@@ -8,9 +8,10 @@
             <div class="image-w-text" v-html="post.body"> </div>
 
             <footer class="container-flex space-between">
+                <social-links :description="post.title"/>
                 <div class="tags container-flex">
                     <span class="tag c-gris" v-for="tag in post.tags">
-
+                        <tag-link :tag="tag" />
                     </span>
                 </div>
             </footer>
@@ -25,6 +26,8 @@
 
 <script>
     export default {
+        components: {},
+
         props: ['url'],
         data(){
             return {

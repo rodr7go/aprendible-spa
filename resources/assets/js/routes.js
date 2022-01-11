@@ -58,5 +58,9 @@ export default new Router({
             component: View404
         }
     ],
-    linkExactActiveClass: 'active'
+    linkExactActiveClass: 'active',
+    'mode': 'history',
+    scrollBehavior() {
+        return {x: 0, y: 0}
+    }
 });
