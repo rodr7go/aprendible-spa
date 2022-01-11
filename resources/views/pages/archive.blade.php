@@ -21,7 +21,6 @@
                             <a href="{{ route('categories.show', $category) }}">{{ $category->name }}</a>
                         </li>
                     @endforeach
-
                 </ul>
             </div>
             <div class="latest-posts">
